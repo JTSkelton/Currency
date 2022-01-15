@@ -21,15 +21,19 @@ function getElements(response) {
   }
 }
 
-function convertCurrency(money) {
-  console.log(money);
+function makeCurrencyList() {
   let myMoneyParse = JSON.parse(sessionStorage.getItem("currencyObject"));
-  console.log(myMoneyParse);
-  $("#showCurrency").text(myMoneyParse[money]);
+  for (let key in myMoneyParse) {
+    const newOption = document.createElement("option");
+    newOption.value = myMoneyParse[key];
+    newOption.text = key;
+    document.getElementById("currencyList").appendChild(newOption);
+  }
 }
 
 window.onload = function () {
   makeApiCall();
+  makeCurrencyList();
 };
 
 $(document).ready(function () {
