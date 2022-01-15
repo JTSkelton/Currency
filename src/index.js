@@ -27,6 +27,7 @@ function makeCurrencyList() {
     const newOption = document.createElement("option");
     newOption.value = myMoneyParse[key];
     newOption.text = key;
+    newOption.id = key;
     document.getElementById("currencyList").appendChild(newOption);
   }
 }
@@ -38,7 +39,10 @@ window.onload = function () {
 
 $(document).ready(function () {
   $("#convertButton").click(function () {
+    let conversionValue = $("#currencyList").val();
+    let conversionName = $("#currencyList").text();
+    console.log(typeof conversionName);
     let money = $("#usdInput").val();
-    convertCurrency(money);
+    $("#showCurrency").html("Your USD is worth: " + money * conversionValue);
   });
 });
