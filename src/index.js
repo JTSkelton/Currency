@@ -7,7 +7,7 @@ import CurrencyConverter from "./currency";
 async function makeApiCall(currency) {
   const response = await CurrencyConverter.convert(currency);
   sessionStorage.setItem(
-    "currencyObject",
+    "currencyObjec",
     JSON.stringify(response.conversion_rates)
   );
   getElements(response);
@@ -21,11 +21,6 @@ function getElements(response) {
   }
 }
 
-$(document).ready(function () {
-  $("#convertButton").click(function () {
-    let money = $("#showCurrency").load(
-      `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`
-    );
-    makeApiCall(money);
-  });
-});
+window.onload = function () {
+  makeApiCall();
+};
