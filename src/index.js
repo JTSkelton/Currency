@@ -7,7 +7,7 @@ import CurrencyConverter from "./currency";
 async function makeApiCall(currency) {
   const response = await CurrencyConverter.convert(currency);
   sessionStorage.setItem(
-    "currencyObjec",
+    "currencyObject",
     JSON.stringify(response.conversion_rates)
   );
   getElements(response);
@@ -21,6 +21,20 @@ function getElements(response) {
   }
 }
 
+function convertCurrency(money) {
+  console.log(money);
+  let myMoneyParse = JSON.parse(sessionStorage.getItem("currencyObject"));
+  console.log(myMoneyParse);
+  $("#showCurrency").text(myMoneyParse[money]);
+}
+
 window.onload = function () {
   makeApiCall();
 };
+
+$(document).ready(function () {
+  $("#convertButton").click(function () {
+    let money = $("#usdInput").val();
+    convertCurrency(money);
+  });
+});
