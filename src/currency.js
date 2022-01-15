@@ -1,8 +1,9 @@
 export default class CurrencyConverter {
   static async convert() {
     try {
+      console.log(`${process.env.API_KEY}`);
       const response = await fetch(
-        `https://v6.exchangerate-api.com/v6/4b893e55c028ab4287796be3/latest/USD`
+        `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`
       );
       if (!response.ok) {
         throw Error(response.statusText);
