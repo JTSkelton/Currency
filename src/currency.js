@@ -7,7 +7,7 @@ export default class CurrencyConverter {
       if (!response.ok) {
         throw Error(response.statusText);
       }
-      return response.json;
+      return response.json();
     } catch (error) {
       return error.message;
     }
