@@ -6,10 +6,7 @@ import CurrencyConverter from "./currency";
 
 async function makeApiCall(currency) {
   const response = await CurrencyConverter.convert(currency);
-  sessionStorage.setItem(
-    "currencyObject",
-    JSON.stringify(response.conversion_rates)
-  );
+  sessionStorage.setItem("currencyObject",JSON.stringify(response.conversion_rates));
   getElements(response);
 }
 
@@ -40,7 +37,11 @@ window.onload = function () {
 $(document).ready(function () {
   $("#convertButton").click(function () {
     let conversionValue = $("#currencyList").val().split(",");
-    let money = $("#usdInput").val();
-    $("#showCurrency").html(`Your $${money} USD is worth: ` + money * conversionValue[1] + " In " + conversionValue[0]);
+    let money = parseInt($("#usdInput").val());
+    console.log(money, typeof money)
+    if (Number.isInteger(money) === false || money < 0) return $("#showCurrency").html("Error, Please Enter a Valid Number");
+    else{
+    $("#showCurrency").html(`Your $${money} USD is worth: ` + money * conversionValue[1] + " in " + conversionValue[0]);
+    }
   });
 });
