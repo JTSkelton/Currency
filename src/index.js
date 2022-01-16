@@ -27,7 +27,6 @@ function makeCurrencyList() {
     newOption.value = [key, myMoneyParse[key]];
     newOption.text = key;
     newOption.id = key;
-    console.log(newOption);
     document.getElementById("currencyList").appendChild(newOption);
   }
 }
