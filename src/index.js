@@ -31,8 +31,8 @@ function makeCurrencyList() {
   }
 }
 
-window.onload = function () {
-  makeApiCall();
+window.onload = async function () {
+  await makeApiCall();
   makeCurrencyList();
 };
 
