@@ -1,9 +1,9 @@
-#container{
+#container {
   text-align: center;
   align-items: center;
-  padding: 6px;
+  padding: 10px;
 }
 
-#showCurrency{
+#showCurrency {
   text-align: center;
 }

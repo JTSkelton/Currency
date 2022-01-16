@@ -1,46 +1,54 @@
-# _{Application name here}_
+# Jacks Super Currency Exchange Rate Calculator
 
-#### By _**{List of contributors}**_
-
-#### _{Brief description of application}_
-
-## Github Pages Link
-
-[TITLE HERE Github Pages](https://patrick-dolan.github.io/APPLICATIONNAMEHERE/)
-
-## Technologies Used
-
-* _HTML_
-* _CSS & Bootstrap_
-* _Javascript & jQuery_
-* _NPM & Webpack_
+#### By Jack Skelton
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+#### This project was created to show my understanding of calling APIs and parsing the data recieved.
+
+## Project Link
+
+https://github.com/JTSkelton/Currency.git
+
+## Technologies Used
+
+- HTML
+- CSS
+- ES6
+- npm
+- Bootstrap
+- jQuery
+- Javascript
+- Jest
+- VSCode
+- GitHub
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+- To clone/run the project to your local computer, follow these steps:
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* At your chosen parent directory, clone this project using $ git clone https://github.com/JTSkelton/Currency.git
+
+* In the top level directory of Currency, create a .env file to store your API Key
+
+* You will need a free API Key from https://www.exchangerate-api.com/
+
+* In the .env file, type API_KEY={ENTER YOUR API KEY HERE} and save the file
+
+* Make sure you have installed [Node js](https://nodejs.org/en/)
+
+* In the terminal, run command $ npm install to install all dependencies
+
+* In the terminal, run the command $ npm run build
+
+* To run the application, in the terminal run the command npm start
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
-
-## Contact Me
-
-_Let me know if you run into any issues or have questions, ideas or concerns:_
-_[Author Email Here]_
+- No known bugs
 
 ## License
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+If there are ay issues with the page, please reach out to me at: skelton.jt9@gmail.com
 
-Copyright (c) _date_ _author name(s)_
+Copyright (c) 1/05/2022 Jack Skelton
