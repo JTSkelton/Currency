@@ -51,4 +51,4 @@ https://github.com/JTSkelton/Currency.git
 
 If there are ay issues with the page, please reach out to me at: skelton.jt9@gmail.com
 
-Copyright (c) 1/05/2022 Jack Skelton
+Copyright (c) 1/15/2022 Jack Skelton
