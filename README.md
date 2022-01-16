@@ -41,7 +41,7 @@ https://github.com/JTSkelton/Currency.git
 
 * In the terminal, run the command $ npm run build
 
-* To run the application, in the terminal run the command npm start
+* To run the application in your browser, in the terminal run the command npm start
 
 ## Known Bugs
 
